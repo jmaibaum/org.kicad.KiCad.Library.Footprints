@@ -1,7 +1,7 @@
 id: org.kicad.KiCad.Library.Footprints
-branch: stable
+branch: beta
 runtime: org.kicad.KiCad
-runtime-version: stable
+runtime-version: beta
 sdk: org.freedesktop.Sdk//21.08
 build-extension: true
 separate-locales: false
@@ -11,13 +11,15 @@ build-options:
 modules:
 - name: kicad-footprints
   buildsystem: cmake-ninja
+  config-opts:
+  - -DKICAD_DATA=/app/extensions/Library/Footprints
   post-install:
   - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.kicad.KiCad.Library.Footprints.metainfo.xml
   - appstream-compose --basename=org.kicad.KiCad.Library.Footprints --prefix=${FLATPAK_DEST}
     --origin=flatpak org.kicad.KiCad.Library.Footprints
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/5.1.12/kicad-footprints-5.1.12.tar.gz
-    sha256: d16742054ee5eacb7db916280960be7a5218d11b0b2201fa6cb6d61ee34652ec
+    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/6.0.0-rc1/kicad-footprints-6.0.0-rc1.tar.gz
+    sha256: 559cae83efae991e5bd475f6b6c32028d411d733cd9f4a3ff685f4c7f244459e
   - type: file
     path: org.kicad.KiCad.Library.Footprints.metainfo.xml
