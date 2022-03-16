@@ -19,7 +19,7 @@ modules:
     --origin=flatpak org.kicad.KiCad.Library.Footprints
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/6.0.2/kicad-footprints-6.0.2.tar.gz
-    sha256: 28bb28cbddf13ddb970293b9404807f99cd07b041d7e5df3447d5764c5fc78b2
+    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/6.0.3/kicad-footprints-6.0.3.tar.gz
+    sha256: 517cc2506f062ec94dd5cebcd8662c714e7ede267a7f6790a19111f5cdb5fbee
   - type: file
     path: org.kicad.KiCad.Library.Footprints.metainfo.xml
