@@ -18,8 +18,12 @@ modules:
   - appstream-compose --basename=org.kicad.KiCad.Library.Footprints --prefix=${FLATPAK_DEST}
     --origin=flatpak org.kicad.KiCad.Library.Footprints
   sources:
-  - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/6.0.9/kicad-footprints-6.0.9.tar.gz
-    sha256: 947b366f5f533226663cea2cadbb1938c1186dc767e47154c026be53d2c61a2a
+  - type: git
+    url: https://gitlab.com/kicad/libraries/kicad-footprints.git
+    commit: 6705da57c29e9896556c7cdbe719ede3f96e9121
+    tag: 6.0.9
+    x-checker-data:
+      type: git
+      tag-pattern: ^([\d\.])+$
   - type: file
     path: org.kicad.KiCad.Library.Footprints.metainfo.xml
