@@ -24,6 +24,6 @@ modules:
     tag: 6.0.9
     x-checker-data:
       type: git
-      tag-pattern: ^([\d\.])+$
+      tag-pattern: ^([\d\.]+)$
   - type: file
     path: org.kicad.KiCad.Library.Footprints.metainfo.xml
