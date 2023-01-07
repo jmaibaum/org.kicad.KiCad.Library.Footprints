@@ -2,7 +2,7 @@ id: org.kicad.KiCad.Library.Footprints
 branch: beta
 runtime: org.kicad.KiCad
 runtime-version: beta
-sdk: org.freedesktop.Sdk//21.08
+sdk: org.freedesktop.Sdk//22.08
 build-extension: true
 separate-locales: false
 appstream-compose: false
@@ -18,8 +18,12 @@ modules:
   - appstream-compose --basename=org.kicad.KiCad.Library.Footprints --prefix=${FLATPAK_DEST}
     --origin=flatpak org.kicad.KiCad.Library.Footprints
   sources:
-  - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/6.0.0-rc1/kicad-footprints-6.0.0-rc1.tar.gz
-    sha256: 559cae83efae991e5bd475f6b6c32028d411d733cd9f4a3ff685f4c7f244459e
+  - type: git
+    url: https://gitlab.com/kicad/libraries/kicad-footprints.git
+    commit: 24671f7754c74dfa528e6b62ebef33b161aa4ab6
+    tag: 6.0.10
+    x-checker-data:
+      type: git
+      tag-pattern: ^([\d\.]+[-rc\d]+)$
   - type: file
     path: org.kicad.KiCad.Library.Footprints.metainfo.xml
