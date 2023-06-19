@@ -9,21 +9,21 @@ appstream-compose: false
 build-options:
   prefix: /app/extensions/Library/Footprints
 modules:
-- name: kicad-footprints
-  buildsystem: cmake-ninja
-  config-opts:
-  - -DKICAD_DATA=/app/extensions/Library/Footprints
-  post-install:
-  - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.kicad.KiCad.Library.Footprints.metainfo.xml
-  - appstream-compose --basename=org.kicad.KiCad.Library.Footprints --prefix=${FLATPAK_DEST}
-    --origin=flatpak org.kicad.KiCad.Library.Footprints
-  sources:
-  - type: git
-    url: https://gitlab.com/kicad/libraries/kicad-footprints.git
-    commit: 7dd79a367f52cb14eac9b73ec19f98392b973958
-    tag: 7.0.0-rc2
-    x-checker-data:
-      type: git
-      tag-pattern: ^([\d\.]+[-rc\d]+)$
-  - type: file
-    path: org.kicad.KiCad.Library.Footprints.metainfo.xml
+  - name: kicad-footprints
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DKICAD_DATA=/app/extensions/Library/Footprints
+    post-install:
+      - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.kicad.KiCad.Library.Footprints.metainfo.xml
+      - appstream-compose --basename=org.kicad.KiCad.Library.Footprints --prefix=${FLATPAK_DEST}
+        --origin=flatpak org.kicad.KiCad.Library.Footprints
+    sources:
+      - type: git
+        url: https://gitlab.com/kicad/libraries/kicad-footprints.git
+        commit: 0cbc0ca2383b46cae9a2d4eb4066616020ecf539
+        tag: 7.0.5
+        x-checker-data:
+          type: git
+          tag-pattern: ^([\d\.]+[-rc\d]+)$
+      - type: file
+        path: org.kicad.KiCad.Library.Footprints.metainfo.xml
