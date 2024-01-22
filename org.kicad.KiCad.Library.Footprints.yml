@@ -20,8 +20,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-footprints.git
-        commit: e4d59061f302443997082d7d94756720e2bae085
-        tag: 8.0.0-rc1
+        commit: 979babae42e0f6c506ad796baa0f9758d988ece3
+        tag: 8.0.0-rc2
         x-checker-data:
           type: git
           tag-pattern: ^([\d\.]+[-rc\d]+)$
