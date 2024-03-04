@@ -19,11 +19,11 @@ modules:
         --origin=flatpak org.kicad.KiCad.Library.Footprints
     sources:
       - type: git
-        is-main-source: true
         url: https://gitlab.com/kicad/libraries/kicad-footprints.git
         commit: be2d37ac77a752f0108ca6d66be2e512bac30abb
         tag: 8.0.1-rc1
         x-checker-data:
+          is-main-source: true
           type: git
           tag-pattern: ^([\d\.]+[-rc\d]+)$
       - type: file
