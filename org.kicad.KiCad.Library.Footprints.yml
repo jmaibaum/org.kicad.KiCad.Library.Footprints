@@ -19,6 +19,7 @@ modules:
         --origin=flatpak org.kicad.KiCad.Library.Footprints
     sources:
       - type: git
+        is-main-source: true
         url: https://gitlab.com/kicad/libraries/kicad-footprints.git
         commit: fb67559296e710cb9fc73008f620e07a3ca9497c
         tag: 8.0.0
