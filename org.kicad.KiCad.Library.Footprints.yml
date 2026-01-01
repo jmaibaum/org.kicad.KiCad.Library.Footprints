@@ -17,8 +17,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-footprints.git
-        commit: f64dbd713b8e5c0f6d8638d6794cda5938b3c7e7
-        tag: 9.0.6
+        commit: 2b941bf1d97862be429793b46fd52a5add09a2fc
+        tag: 9.0.7
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-footprints/repository/tags
